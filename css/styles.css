@@ -1,0 +1,175 @@
+/* styles.css */
+@font-face {
+    font-family: 'WayfinderCF';
+    src: url('/fonts/FontsFree-Net-wayfindercf-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WayfinderCFItalic';
+    src: url('/fonts/NeueMontreal-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WayfinderCF';
+    src: url('/fonts/NeueMontreal-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WayfinderCF-Regular';
+    src: url('/fonts/NeueMontreal-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    background-image: url("../image/record.jpg");
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    float: left;
+}
+
+.nav-menu li:last-child {
+    float: right;
+}
+
+.nav-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-menu li a:hover {
+    background-color: #555;
+}
+
+#followImage {
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    width: 60px;
+    height: 200px;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+#followImage.active {
+    transform: scale(1.1);
+    /* Khi có class active, thực hiện hiệu ứng rung lắc */
+    opacity: 1;
+}
+
+
+/*Image slider */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    align-content: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1.5s ease;
+}
+
+.slider img {
+    width: 300px;
+    height: auto;
+    opacity: 0.7;
+}
+
+.slider img:nth-child(odd) {
+    transform: rotate(11deg);
+}
+
+.slider img:nth-child(even) {
+    transform: rotate(45deg);
+}
+
+.fake-table {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 200px
+}
+
+.fake-table>li {
+    margin-bottom: 4px;
+    /* Adds space between rows */
+}
+
+.fake-table>li>ul {
+    padding: 3px;
+    /* Add padding to see the background color */
+    margin: 0 5px;
+    /* Add horizontal margins to create space between the `ul` elements */
+    display: flex;
+    justify-content: space-between;
+    background-color: #db9210;
+    flex: 1;
+}
+
+.fake-table>li>ul>li {
+    list-style-type: none;
+    flex: 1;
+    padding: 3px;
+    /* Adjust padding for vertical centering */
+    color: black;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'WayfinderCFItalic', Arial, sans-serif;
+    background-color: transparent;
+    /* Ensures that the `li` does not cover the `ul`'s background */
+}
+
+.fake-table>li:nth-child(even)>ul {
+    background-color: #f4a261;
+    /* Even row background color for each `ul` */
+}
+
+.fake-table>li:hover>ul {
+    background-color: #f4a261;
+    /* Hover row background color for each `ul` */
+    color: #333333;
+}
+
+.start {
+    width: 50px;
+    height: auto;
+}
+
+.start img {
+    width: 100%;
+    height: 100%;
+}
